@@ -1,0 +1,64 @@
+{
+  "fecha_utc": "2026-11-16T01:35:08.557275+00:00",
+  "consulta_sql": "SELECT id_producto,\n       SUM(cantidad) AS cantidad_vendida,\n       SUM(total) AS ingresos\nFROM fact_ventas\nWHERE es_completado = TRUE\nGROUP BY id_producto",
+  "pipeline_mongo": [
+    {
+      "$match": {
+        "evento": "producto_visto"
+      }
+    },
+    {
+      "$group": {
+        "_id": "$producto",
+        "numero_visualizaciones": {
+          "$sum": 1
+        }
+      }
+    },
+    {
+      "$project": {
+        "_id": 0,
+        "id_producto": "$_id",
+        "numero_visualizaciones": 1
+      }
+    }
+  ],
+  "modo": "bases_reales_sin_fallback",
+  "cloud_exigido": true,
+  "postgresql": {
+    "motor": "PostgreSQL",
+    "host": "aws-0-us-west-2.pooler.supabase.com",
+    "base": "postgres",
+    "productos_leidos": 606,
+    "productos_con_ventas": 514
+  },
+  "mongodb": {
+    "motor": "MongoDB",
+    "base": "Prueba1",
+    "atlas": true,
+    "eventos_totales": 4236,
+    "productos_con_visitas": 455
+  },
+  "computo": {
+    "google_colab": false,
+    "python": "3.12.10"
+  },
+  "resultado": {
+    "productos_catalogo": 606,
+    "producto_mas_visto": {
+      "id_producto": 609,
+      "nombre": "Switch Kortex Core",
+      "visualizaciones": 23
+    },
+    "producto_mas_vendido": {
+      "id_producto": 324,
+      "nombre": "Monitor Ultrawide Kortex Air",
+      "unidades": 252
+    },
+    "correlacion_pearson": 0.17225,
+    "correlacion_spearman": 0.33236,
+    "muchas_visitas_sin_ventas": 20,
+    "ventas_sin_visitas": 122,
+    "nota": "Los eventos producto_visto no son sesiones unicas. La correlacion no demuestra causalidad."
+  }
+}

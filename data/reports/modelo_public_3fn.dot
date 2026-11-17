@@ -1,0 +1,41 @@
+digraph JUC3FN {
+  graph [rankdir=LR, bgcolor="white", pad="0.35", nodesep="0.55", ranksep="0.75", splines=polyline,
+         label="CORPORATIVO JUC | MODELO OPERATIVO 3FN (public)", labelloc=t, fontsize=21, fontname="DejaVu Sans", fontcolor="#263445"];
+  node [shape=plain, fontname="DejaVu Sans", fontsize=10];
+  edge [color="#67798c", penwidth=1.3, arrowhead=crow, arrowsize=.65, fontname="DejaVu Sans", fontsize=9];
+  categorias [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>categorias</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_categoria</TD></TR><TR><TD ALIGN="LEFT">nombre (UNIQUE)</TD></TR><TR><TD ALIGN="LEFT">descripcion</TD></TR></TABLE>>];
+  ciudades [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>dim_ciudades</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_ciudad</TD></TR><TR><TD ALIGN="LEFT">nombre (UNIQUE)</TD></TR><TR><TD ALIGN="LEFT">region</TD></TR></TABLE>>];
+  sucursales [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>dim_sucursales</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_sucursal</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_ciudad</TD></TR><TR><TD ALIGN="LEFT">nombre (UNIQUE)</TD></TR><TR><TD ALIGN="LEFT">metros_cuadrados</TD></TR><TR><TD ALIGN="LEFT">fecha_apertura</TD></TR></TABLE>>];
+  clientes [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>clientes</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_cliente</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_ciudad</TD></TR><TR><TD ALIGN="LEFT">nombre, correo, telefono</TD></TR><TR><TD ALIGN="LEFT">fecha_alta, canal_registro</TD></TR><TR><TD ALIGN="LEFT">es_premium</TD></TR></TABLE>>];
+  productos [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>productos</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_producto</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_categoria</TD></TR><TR><TD ALIGN="LEFT">nombre, precio, margen_bruto</TD></TR><TR><TD ALIGN="LEFT">id_proveedor, activo</TD></TR><TR><TD ALIGN="LEFT">fecha_lanzamiento</TD></TR></TABLE>>];
+  pedidos [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>pedidos</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_pedido</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_cliente</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_sucursal (opcional)</TD></TR><TR><TD ALIGN="LEFT">fecha_pedido</TD></TR><TR><TD ALIGN="LEFT">canal_venta, estado</TD></TR></TABLE>>];
+  detalle [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>detalle_pedido</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_detalle</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_pedido</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_producto</TD></TR><TR><TD ALIGN="LEFT">cantidad, precio_unitario</TD></TR><TR><TD ALIGN="LEFT">descuento</TD></TR></TABLE>>];
+  pagos [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7" BGCOLOR="#f5f9ff" COLOR="#b5cbe4">
+    <TR><TD BGCOLOR="#244e7d"><FONT COLOR="white"><B>pagos</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT"><B>PK</B> id_pago</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> id_pedido</TD></TR><TR><TD ALIGN="LEFT">metodo, monto</TD></TR><TR><TD ALIGN="LEFT">fecha_pago, estado_pago</TD></TR></TABLE>>];
+  analitica [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#fff6df" COLOR="#e6c273">
+    <TR><TD BGCOLOR="#ae7a13"><FONT COLOR="white"><B>fact_ventas</B></FONT></TD></TR>
+    <TR><TD>Tabla analitica<br/>desnormalizada<br/>(BI / Big Data)</TD></TR></TABLE>>];
+  vistas [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#e9f6ef" COLOR="#95c7a9">
+    <TR><TD BGCOLOR="#357a57"><FONT COLOR="white"><B>Vistas calculadas</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT">v_detalle_calculado</TD></TR><TR><TD ALIGN="LEFT">v_pedidos_calculados</TD></TR><TR><TD ALIGN="LEFT">v_pagos_conciliados</TD></TR><TR><TD ALIGN="LEFT">v_resumen_ventas</TD></TR></TABLE>>];
+  ciudades -> clientes; ciudades -> sucursales; categorias -> productos;
+  clientes -> pedidos; sucursales -> pedidos; pedidos -> detalle; productos -> detalle; pedidos -> pagos;
+  detalle -> vistas [style=dashed,color="#5b9e75",arrowhead=vee];
+  pedidos -> vistas [style=dashed,color="#5b9e75",arrowhead=vee];
+  analitica -> vistas [style=dashed,color="#b18d34",arrowhead=vee];
+}

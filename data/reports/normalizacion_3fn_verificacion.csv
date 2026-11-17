@@ -1,0 +1,9 @@
+﻿tabla,registros_public,registros_3fn,coincide
+categorias,6,6,True
+dim_ciudades,10,10,True
+dim_sucursales,12,12,True
+clientes,1862,1862,True
+productos,606,606,True
+pedidos,3277,3277,True
+detalle_pedido,3891,3891,True
+pagos,3277,3277,True

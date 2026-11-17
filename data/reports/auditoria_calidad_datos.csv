@@ -1,0 +1,13 @@
+﻿indicador,valor,criterio,estado
+pedidos: fechas fuera de periodo/invalidas,0,rango permitido: 2024-01-01 a 2026-09-30,OK
+pagos: fechas fuera de periodo/invalidas,0,rango permitido: 2024-01-01 a 2026-09-30,OK
+resenas: fechas fuera de periodo/invalidas,0,rango permitido: 2024-01-01 a 2026-09-30,OK
+actividad_usuario: fechas fuera de periodo/invalidas,0,rango permitido: 2024-01-01 a 2026-09-30,OK
+pedidos: estados no reconocidos,0,solo estados permitidos,OK
+pedidos: estados desconocidos,0,desconocido no equivale a completado/aprobado,OK
+pagos: estados no reconocidos,0,solo estados permitidos,OK
+pagos: estados desconocidos,51,desconocido no equivale a completado/aprobado,OK
+pedidos: todos los encabezados,3277,tabla pedidos,OK
+pedidos: con detalle,2259,existen en fact_ventas,OK
+pedidos: sin detalle conservado,1018,no deben desaparecer del denominador de cancelacion,OK
+pedidos: cancelados,522,estado literal cancelado,OK

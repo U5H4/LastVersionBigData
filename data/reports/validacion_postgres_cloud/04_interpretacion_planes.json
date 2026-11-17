@@ -1,0 +1,49 @@
+{
+  "estado": "OK",
+  "fecha_utc": "2026-11-15T03:13:28.764533+00:00",
+  "planes": [
+    {
+      "prueba": "E01",
+      "archivo": "E01_explain_analyze.txt",
+      "planning_ms": 0.113,
+      "execution_ms": 0.844,
+      "index_scan": 1,
+      "seq_scan": 0,
+      "bitmap_heap_scan": 0,
+      "joins": 0,
+      "indices_nominales": [
+        "ix_fact_anio_mes"
+      ]
+    },
+    {
+      "prueba": "E02",
+      "archivo": "E02_explain_analyze.txt",
+      "planning_ms": 0.109,
+      "execution_ms": 0.166,
+      "index_scan": 1,
+      "seq_scan": 0,
+      "bitmap_heap_scan": 1,
+      "joins": 0,
+      "indices_nominales": []
+    },
+    {
+      "prueba": "E03",
+      "archivo": "E03_explain_analyze.txt",
+      "planning_ms": 4.231,
+      "execution_ms": 0.66,
+      "index_scan": 7,
+      "seq_scan": 0,
+      "bitmap_heap_scan": 0,
+      "joins": 6,
+      "indices_nominales": [
+        "categorias_pkey",
+        "clientes_pkey",
+        "dim_ciudades_pkey",
+        "ix_detalle_pedido_id_pedido",
+        "ix_pagos_id_pedido",
+        "ix_pedidos_fecha_pedido",
+        "productos_pkey"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿indicador,valor,nota
+Ingresos totales,"$127,336,206.51",ventas de pedidos completados o enviados; no equivale a pagos aprobados
+Pedidos totales,"3,277",encabezados en pedidos (incluye los que no tienen detalle)
+Pedidos con detalle,"2,259",encabezados de pedidos presentes en fact_ventas
+Pedidos sin detalle,"1,018",pedidos sin lineas conservadas; no se cuentan en el ticket
+Pedidos completados,"1,595",estado literal completado (no incluye enviado)
+Pedidos enviados,560,estado literal enviado
+Pedidos pendientes,600,estado literal pendiente
+Pedidos cancelados,522,estado literal cancelado
+Pedidos estado desconocido,0,sin evidencia verificable de estado
+Pedidos facturables con detalle,"1,483","completado o enviado, con al menos una linea de fact_ventas"
+Tasa de cancelacion,15.93%,pedidos cancelados / todos los encabezados de pedidos
+Unidades vendidas,"10,782",
+Ticket promedio,"$85,863.93",facturacion / pedidos facturables con detalle (completado o enviado)
+Unidades por pedido,7.27,solo pedidos facturables con detalle
+Clientes activos,"1,314",clientes con al menos un pedido con detalle en fact_ventas
+Clientes con pedido (todos),"1,536",clientes distintos en la tabla pedidos completa
+Productos vendidos,514,
+Categorias,6,
+Producto mas vendido,Monitor Ultrawide Kortex Air,252 unidades vendidas
+Categoria mas rentable,Computadoras,"$19,450,980.64 de utilidad bruta"
+Ciudad con mayores ventas,Tijuana,"$17,084,442.12 facturados"
+Mes con mayores ventas,2024-08,"$6,099,562.33; serie completa en 02_ventas_mensuales.csv"
+Utilidad bruta,"$37,982,053.12",ingreso - costo - descuentos
+Margen real ponderado,29.46%,utilidad / ingreso bruto
+Descuentos otorgados,"$1,574,292.30",
+Ticket con descuento,"$48,090.66",solo lineas con descuento
+Ticket sin descuento,"$50,042.85",
+Ingreso por cliente,"$82,901.18",
+Producto mas visto,Switch Kortex Core,23 visualizaciones
+Calificacion promedio,3.01,"sobre 2,475 resenas"

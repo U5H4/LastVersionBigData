@@ -1,0 +1,21 @@
+﻿cliente,ciudad,categoria,producto,id_pedido,fecha_pedido,cantidad,precio_unitario,descuento,total,metodo_pago,estado_pago
+Mariana Garcia,Veracruz,Computadoras,Mini PC Vertex Air,821,2026-09-29,6,13896.00,0.00,83376.00,tarjeta_credito,aprobado
+Mariana Garcia,Veracruz,Computadoras,All-in-One Vertex One,821,2026-09-29,1,13070.40,2526.05,10544.35,tarjeta_credito,aprobado
+Maria Lopez,Guadalajara,Redes,Router Nova GT,1085,2026-09-28,1,2616.22,0.00,2616.22,mpago,aprobado
+Maria Lopez,Guadalajara,Monitores,Monitor Ultrawide Kortex Air,1085,2026-09-28,6,4902.47,0.00,29414.82,mpago,aprobado
+Maria Diaz,Merida,Monitores,Monitor Gamer Auric Nova,1277,2026-09-28,6,2672.96,0.00,16037.76,tarjeta_debito,aprobado
+Maria Ruiz,Monterrey,Computadoras,All-in-One Lumen Edge,3257,2026-09-27,2,55867.02,13273.84,98460.20,transferencia,rechazado
+Rodrigo Gomez,Tijuana,Computadoras,Mini PC Lumen SE,2234,2026-09-26,5,58178.52,0.00,290892.60,oxxo,aprobado
+Rodrigo Gomez,Tijuana,Smartphones,Smartphone Cobalto Max,2234,2026-09-26,8,28895.45,2740.41,228423.19,oxxo,aprobado
+Rodrigo Gomez,Tijuana,Smartphones,Smartphone Helix Lite Pro,2234,2026-09-26,6,15408.00,0.00,92448.00,oxxo,aprobado
+Abril Cardona,Guadalajara,Audio,Auriculares Gaming Onyx Zen,1561,2026-09-25,2,7591.04,0.00,15182.08,transferencia,rechazado
+Camila Ortiz,Cancun,Monitores,Monitor Ultrawide Lumen Core,806,2026-09-24,3,8683.55,0.00,26050.65,tarjeta_credito,aprobado
+Regina Alvarez,Merida,Computadoras,All-in-One Kortex Max,656,2026-09-23,1,45333.45,0.00,45333.45,oxxo,aprobado
+Regina Alvarez,Merida,Smartphones,Smartphone Quartz Max,656,2026-09-23,1,8728.22,0.00,8728.22,oxxo,aprobado
+Regina Alvarez,Merida,Smartphones,Smartphone Helix Lite Pro,656,2026-09-23,1,15407.88,0.00,15407.88,oxxo,aprobado
+Citlali Navarro,Veracruz,Computadoras,All-in-One Nova Max,720,2026-09-23,1,26069.66,0.00,26069.66,transferencia,rechazado
+Oscar Ramirez,Ciudad de Mexico,Accesorios,Webcam Helix Nova,1522,2026-09-23,1,401.93,62.75,339.18,efectivo,pendiente
+Oscar Ramirez,Ciudad de Mexico,Monitores,Monitor Gamer Kortex GT,1522,2026-09-23,7,7242.48,1691.82,49005.54,efectivo,pendiente
+Paola Martinez,Tijuana,Accesorios,Teclado Mecanico Cobalto Edge,2078,2026-09-23,4,701.76,0.00,2807.04,transferencia,aprobado
+Paola Martinez,Tijuana,Computadoras,All-in-One Lumen Edge,2078,2026-09-23,6,55867.02,0.00,335202.12,transferencia,aprobado
+Ricardo Ortiz,Ciudad de Mexico,Computadoras,Workstation Lumen Elite,1639,2026-09-21,5,56550.90,7540.35,275214.15,tarjeta_debito,rechazado

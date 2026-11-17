@@ -1,0 +1,11 @@
+Aggregate  (cost=75.08..75.09 rows=1 width=8) (actual time=0.133..0.134 rows=1 loops=1)
+  Buffers: shared hit=68
+  ->  Bitmap Heap Scan on fact_ventas  (cost=2.02..74.88 rows=83 width=4) (actual time=0.030..0.105 rows=81 loops=1)
+        Recheck Cond: (id_producto = 324)
+        Heap Blocks: exact=66
+        Buffers: shared hit=68
+        ->  Bitmap Index Scan on ix_fact_producto  (cost=0.00..2.00 rows=83 width=0) (actual time=0.015..0.016 rows=82 loops=1)
+              Index Cond: (id_producto = 324)
+              Buffers: shared hit=2
+Planning Time: 0.109 ms
+Execution Time: 0.166 ms

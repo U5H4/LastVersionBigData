@@ -1,0 +1,4 @@
+﻿prueba,titulo,estado,indices_en_plan,error
+E01,Indice por periodo,OK,ix_fact_anio_mes,
+E02,Indice por producto,OK,ix_fact_producto,
+E03,JOIN de tablas 3FN (Q19),OK,"categorias_pkey, clientes_pkey, dim_ciudades_pkey, ix_detalle_pedido_id_pedido, ix_pagos_id_pedido, ix_pedidos_fecha_pedido, productos_pkey",

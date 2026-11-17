@@ -1,0 +1,7 @@
+﻿grafico,titulo,archivo,estado,kb,error
+01_ventas_mensuales,Serie temporal de ventas,01_ventas_mensuales.html,OK,11.0,
+02_mix_categoria,Mix por categoria,02_mix_categoria.html,OK,8.7,
+03_embudo_navegacion,Embudo navegacion-compra,03_embudo_navegacion.html,OK,8.5,
+04_impacto_descuentos,Descuentos vs margen,04_impacto_descuentos.html,OK,8.7,
+05_ventas_por_ciudad,Ventas por ciudad,05_ventas_por_ciudad.html,OK,8.9,
+06_satisfaccion,Calificaciones,06_satisfaccion.html,OK,8.6,

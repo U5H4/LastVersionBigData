@@ -1,0 +1,85 @@
+{
+  "estado": "PLAN_LISTO_SIN_ESCRITURA",
+  "postgresql": {
+    "motor": "PostgreSQL",
+    "base": "Supabase",
+    "tablas": {
+      "categorias": {
+        "registros": 6,
+        "filas_diferentes": 0,
+        "columnas": 3
+      },
+      "dim_ciudades": {
+        "registros": 10,
+        "filas_diferentes": 0,
+        "columnas": 3
+      },
+      "dim_sucursales": {
+        "registros": 12,
+        "filas_diferentes": 0,
+        "columnas": 5
+      },
+      "clientes": {
+        "registros": 1862,
+        "filas_diferentes": 0,
+        "columnas": 8
+      },
+      "productos": {
+        "registros": 606,
+        "filas_diferentes": 0,
+        "columnas": 8
+      },
+      "pedidos": {
+        "registros": 3277,
+        "filas_diferentes": 0,
+        "columnas": 6
+      },
+      "detalle_pedido": {
+        "registros": 3891,
+        "filas_diferentes": 0,
+        "columnas": 6
+      },
+      "pagos": {
+        "registros": 3277,
+        "filas_diferentes": 0,
+        "columnas": 6
+      },
+      "fact_ventas": {
+        "registros": 3891,
+        "filas_diferentes": 0,
+        "columnas": 47
+      }
+    }
+  },
+  "mongodb": {
+    "motor": "MongoDB Atlas",
+    "base": "Prueba1",
+    "colecciones": {
+      "productos": {
+        "documentos": 606,
+        "documentos_diferentes": 0,
+        "clave_utilizada": [
+          "id_producto"
+        ]
+      },
+      "resenas": {
+        "documentos": 2475,
+        "documentos_diferentes": 0,
+        "clave_utilizada": [
+          "id_resena"
+        ]
+      },
+      "actividad_usuario": {
+        "documentos": 4236,
+        "documentos_diferentes": 4,
+        "clave_utilizada": [
+          "usuario",
+          "evento",
+          "producto",
+          "dispositivo",
+          "duracion_seg"
+        ]
+      }
+    }
+  }
+}

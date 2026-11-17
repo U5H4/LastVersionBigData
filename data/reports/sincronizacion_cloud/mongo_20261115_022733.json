@@ -1,0 +1,14 @@
+{
+  "estado": "OK",
+  "respaldo_datos": [
+    "juc_backup_20261115_022658_productos",
+    "juc_backup_20261115_022658_resenas",
+    "juc_backup_20261115_022658_actividad_usuario"
+  ],
+  "advertencia": "MongoDB no comparte transaccion con PostgreSQL; respalda las colecciones antes de actualizar",
+  "documentos_actualizados": {
+    "productos": 0,
+    "resenas": 0,
+    "actividad_usuario": 4
+  }
+}

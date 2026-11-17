@@ -1,0 +1,4 @@
+﻿prueba,archivo,planning_ms,execution_ms,index_scan,seq_scan,bitmap_heap_scan,joins,indices_nominales
+E01,E01_explain_analyze.txt,0.113,0.844,1,0,0,0,ix_fact_anio_mes
+E02,E02_explain_analyze.txt,0.109,0.166,1,0,1,0,
+E03,E03_explain_analyze.txt,4.231,0.66,7,0,0,6,"categorias_pkey, clientes_pkey, dim_ciudades_pkey, ix_detalle_pedido_id_pedido, ix_pagos_id_pedido, ix_pedidos_fecha_pedido, productos_pkey"

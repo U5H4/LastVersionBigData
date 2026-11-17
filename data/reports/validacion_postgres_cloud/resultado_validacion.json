@@ -1,0 +1,216 @@
+{
+  "fecha_utc": "2026-11-15T03:12:35.214832+00:00",
+  "motor": "PostgreSQL (Supabase)",
+  "modo": "SOLO_LECTURA",
+  "consultas_detectadas": 20,
+  "tablas": {
+    "categorias": 6,
+    "dim_ciudades": 10,
+    "dim_sucursales": 12,
+    "clientes": 1862,
+    "productos": 606,
+    "pedidos": 3277,
+    "detalle_pedido": 3891,
+    "pagos": 3277,
+    "fact_ventas": 3891
+  },
+  "vistas_encontradas": [
+    "v_detalle_calculado",
+    "v_pagos_conciliados",
+    "v_pedidos_calculados",
+    "v_resumen_ventas"
+  ],
+  "indices_revisados": [
+    "ix_fact_anio_mes",
+    "ix_fact_producto",
+    "ix_pedidos_fecha_pedido"
+  ],
+  "indices_totales_public": 36,
+  "faltan_tablas": [],
+  "faltan_vistas": [],
+  "faltan_indices": [],
+  "avisos": [],
+  "estado": "OK",
+  "consultas_ok": 20,
+  "consultas_total": 20,
+  "explain_ok": 3,
+  "explain_total": 3,
+  "consultas": [
+    {
+      "consulta": "Q01",
+      "titulo": "Top 10 productos por facturacion",
+      "estado": "OK",
+      "filas_resultado": 10,
+      "archivo": "consultas/Q01.csv"
+    },
+    {
+      "consulta": "Q02",
+      "titulo": "Top 10 clientes por gasto",
+      "estado": "OK",
+      "filas_resultado": 10,
+      "archivo": "consultas/Q02.csv"
+    },
+    {
+      "consulta": "Q03",
+      "titulo": "Ventas mes a mes (serie temporal)",
+      "estado": "OK",
+      "filas_resultado": 33,
+      "archivo": "consultas/Q03.csv"
+    },
+    {
+      "consulta": "Q04",
+      "titulo": "Facturacion por categoria",
+      "estado": "OK",
+      "filas_resultado": 6,
+      "archivo": "consultas/Q04.csv"
+    },
+    {
+      "consulta": "Q05",
+      "titulo": "Ticket promedio por canal de venta",
+      "estado": "OK",
+      "filas_resultado": 3,
+      "archivo": "consultas/Q05.csv"
+    },
+    {
+      "consulta": "Q06",
+      "titulo": "Productos en catalogo que NUNCA se vendieron",
+      "estado": "OK",
+      "filas_resultado": 55,
+      "archivo": "consultas/Q06.csv"
+    },
+    {
+      "consulta": "Q07",
+      "titulo": "Clientes con pedidos cancelados",
+      "estado": "OK",
+      "filas_resultado": 25,
+      "archivo": "consultas/Q07.csv"
+    },
+    {
+      "consulta": "Q08",
+      "titulo": "Metodos de pago mas usados y su conciliacion",
+      "estado": "OK",
+      "filas_resultado": 6,
+      "archivo": "consultas/Q08.csv"
+    },
+    {
+      "consulta": "Q09",
+      "titulo": "Productos con mayor descuento promedio",
+      "estado": "OK",
+      "filas_resultado": 20,
+      "archivo": "consultas/Q09.csv"
+    },
+    {
+      "consulta": "Q10",
+      "titulo": "Ciudades con mas facturacion",
+      "estado": "OK",
+      "filas_resultado": 10,
+      "archivo": "consultas/Q10.csv"
+    },
+    {
+      "consulta": "Q11",
+      "titulo": "Clientes premium vs estandar",
+      "estado": "OK",
+      "filas_resultado": 2,
+      "archivo": "consultas/Q11.csv"
+    },
+    {
+      "consulta": "Q12",
+      "titulo": "Concentracion de ventas (ley de Pareto)",
+      "estado": "OK",
+      "filas_resultado": 1,
+      "archivo": "consultas/Q12.csv"
+    },
+    {
+      "consulta": "Q13",
+      "titulo": "Productos con mejor margen real",
+      "estado": "OK",
+      "filas_resultado": 20,
+      "archivo": "consultas/Q13.csv"
+    },
+    {
+      "consulta": "Q14",
+      "titulo": "Pedidos con pago NO conciliado",
+      "estado": "OK",
+      "filas_resultado": 25,
+      "archivo": "consultas/Q14.csv"
+    },
+    {
+      "consulta": "Q15",
+      "titulo": "Clientes nuevos vs recurrentes",
+      "estado": "OK",
+      "filas_resultado": 2,
+      "archivo": "consultas/Q15.csv"
+    },
+    {
+      "consulta": "Q16",
+      "titulo": "Trimestre x categoria (pivot de mix)",
+      "estado": "OK",
+      "filas_resultado": 66,
+      "archivo": "consultas/Q16.csv"
+    },
+    {
+      "consulta": "Q17",
+      "titulo": "Productos de alto valor y baja rotacion",
+      "estado": "OK",
+      "filas_resultado": 25,
+      "archivo": "consultas/Q17.csv"
+    },
+    {
+      "consulta": "Q18",
+      "titulo": "Cobertura por sucursal y estado del pedido",
+      "estado": "OK",
+      "filas_resultado": 48,
+      "archivo": "consultas/Q18.csv"
+    },
+    {
+      "consulta": "Q19",
+      "titulo": "Detalle 360 del pedido (JOIN de 7 tablas)",
+      "estado": "OK",
+      "filas_resultado": 20,
+      "archivo": "consultas/Q19.csv"
+    },
+    {
+      "consulta": "Q20",
+      "titulo": "Resumen mensual via vista v_resumen_ventas",
+      "estado": "OK",
+      "filas_resultado": 33,
+      "archivo": "consultas/Q20.csv"
+    }
+  ],
+  "planes_explain": [
+    {
+      "prueba": "E01",
+      "titulo": "Indice por periodo",
+      "estado": "OK",
+      "archivo": "E01_explain_analyze.txt",
+      "indices_en_plan": [
+        "ix_fact_anio_mes"
+      ]
+    },
+    {
+      "prueba": "E02",
+      "titulo": "Indice por producto",
+      "estado": "OK",
+      "archivo": "E02_explain_analyze.txt",
+      "indices_en_plan": [
+        "ix_fact_producto"
+      ]
+    },
+    {
+      "prueba": "E03",
+      "titulo": "JOIN de tablas 3FN (Q19)",
+      "estado": "OK",
+      "archivo": "E03_explain_analyze.txt",
+      "indices_en_plan": [
+        "categorias_pkey",
+        "clientes_pkey",
+        "dim_ciudades_pkey",
+        "ix_detalle_pedido_id_pedido",
+        "ix_pagos_id_pedido",
+        "ix_pedidos_fecha_pedido",
+        "productos_pkey"
+      ]
+    }
+  ],
+  "evidencias": "C:\\Users\\jesus\\OneDrive\\Documentos\\BIG DATA\\Proyecto_JUC_Prioridad_Media_Completo\\Proyecto_BigData-main\\data\\reports\\validacion_postgres_cloud"
+}

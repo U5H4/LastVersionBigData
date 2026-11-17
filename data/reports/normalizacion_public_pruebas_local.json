@@ -1,0 +1,23 @@
+{
+  "motor": "SQLite (prueba local, no Supabase)",
+  "tablas": {
+    "categorias": 6,
+    "dim_ciudades": 10,
+    "dim_sucursales": 12,
+    "clientes": 1862,
+    "productos": 606,
+    "pedidos": 3277,
+    "detalle_pedido": 3891,
+    "pagos": 3277,
+    "fact_ventas": 3891
+  },
+  "consultas_sql_ok": 20,
+  "consultas_sql_errores": [],
+  "vistas_filas": {
+    "v_detalle_calculado": 3891,
+    "v_pagos_conciliados": 3277,
+    "v_pedidos_calculados": 3277,
+    "v_resumen_ventas": 33
+  },
+  "configuracion": "public: ocho tablas operativas 3FN + fact_ventas analitica"
+}

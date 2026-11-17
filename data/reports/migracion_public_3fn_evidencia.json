@@ -1,0 +1,17 @@
+{
+  "estado": "OK",
+  "respaldo": "juc_backup_20261114_234805",
+  "registros": {
+    "categorias": 6,
+    "dim_ciudades": 10,
+    "dim_sucursales": 12,
+    "clientes": 1862,
+    "productos": 606,
+    "pedidos": 3277,
+    "detalle_pedido": 3891,
+    "pagos": 3277,
+    "fact_ventas": 3891
+  },
+  "fecha_utc": "2026-11-14T23:48:13.024178+00:00",
+  "observacion": "Los datos cloud existentes se conservan; no se importa el ETL local corregido"
+}

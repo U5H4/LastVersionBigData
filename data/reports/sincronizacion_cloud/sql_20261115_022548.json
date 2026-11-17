@@ -1,0 +1,43 @@
+{
+  "estado": "OK",
+  "respaldo": "juc_sync_backup_20261115_022533",
+  "nota_respaldo": "Snapshot de DATOS, no incluye DDL ni indices",
+  "tablas": {
+    "categorias": {
+      "registros": 6,
+      "filas_actualizadas": 0
+    },
+    "dim_ciudades": {
+      "registros": 10,
+      "filas_actualizadas": 0
+    },
+    "dim_sucursales": {
+      "registros": 12,
+      "filas_actualizadas": 0
+    },
+    "clientes": {
+      "registros": 1862,
+      "filas_actualizadas": 0
+    },
+    "productos": {
+      "registros": 606,
+      "filas_actualizadas": 0
+    },
+    "pedidos": {
+      "registros": 3277,
+      "filas_actualizadas": 11
+    },
+    "detalle_pedido": {
+      "registros": 3891,
+      "filas_actualizadas": 0
+    },
+    "pagos": {
+      "registros": 3277,
+      "filas_actualizadas": 62
+    },
+    "fact_ventas": {
+      "registros": 3891,
+      "filas_actualizadas": 79
+    }
+  }
+}

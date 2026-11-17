@@ -1,0 +1,34 @@
+{
+  "fecha_utc": "2026-11-15T02:43:02.447334+00:00",
+  "motor": "PostgreSQL (Supabase)",
+  "modo": "SOLO_LECTURA",
+  "consultas_detectadas": 20,
+  "tablas": {
+    "categorias": 6,
+    "dim_ciudades": 10,
+    "dim_sucursales": 12,
+    "clientes": 1862,
+    "productos": 606,
+    "pedidos": 3277,
+    "detalle_pedido": 3891,
+    "pagos": 3277,
+    "fact_ventas": 3891
+  },
+  "vistas_encontradas": [
+    "v_detalle_calculado",
+    "v_pagos_conciliados",
+    "v_pedidos_calculados",
+    "v_resumen_ventas"
+  ],
+  "indices_revisados": [
+    "ix_fact_anio_mes",
+    "ix_fact_producto",
+    "ix_pedidos_fecha_pedido"
+  ],
+  "indices_totales_public": 36,
+  "faltan_tablas": [],
+  "faltan_vistas": [],
+  "faltan_indices": [],
+  "avisos": [],
+  "estado": "PLAN_OK_SIN_CAMBIOS"
+}

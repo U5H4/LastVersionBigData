@@ -1,0 +1,12 @@
+{
+  "fecha_utc": "2026-11-15T03:13:14.550454+00:00",
+  "estado": "OK",
+  "solo_lectura": true,
+  "metodos_revisados": 6,
+  "pedidos_distintos_por_metodo": 3277,
+  "total_monto_q08": "206757708.89",
+  "total_monto_pagos": "206757708.89",
+  "diferencia_neta_total_sql_anterior_menos_pagos": "246135210.91",
+  "archivo": "C:\\Users\\jesus\\OneDrive\\Documentos\\BIG DATA\\Proyecto_JUC_Prioridad_Media_Completo\\Proyecto_BigData-main\\data\\reports\\validacion_postgres_cloud\\03_auditoria_q08.csv",
+  "nota": "La diferencia del SQL anterior es neta: fact_ventas repite montos en pedidos multilínea y omite pedidos sin detalle. Conciliacion tecnica no confirma aprobacion bancaria."
+}

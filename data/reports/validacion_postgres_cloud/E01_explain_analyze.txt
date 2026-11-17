@@ -1,0 +1,8 @@
+Aggregate  (cost=7.56..7.57 rows=1 width=8) (actual time=0.808..0.809 rows=1 loops=1)
+  Buffers: shared hit=37
+  ->  Index Only Scan using ix_fact_anio_mes on fact_ventas  (cost=0.28..7.20 rows=144 width=0) (actual time=0.748..0.795 rows=141 loops=1)
+        Index Cond: (anio_mes = '2024-08'::bpchar)
+        Heap Fetches: 48
+        Buffers: shared hit=37
+Planning Time: 0.113 ms
+Execution Time: 0.844 ms

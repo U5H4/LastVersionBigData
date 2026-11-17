@@ -1,0 +1,18 @@
+{
+  "fecha_utc": "2026-11-14T20:02:41.686730+00:00",
+  "motor": "PostgreSQL",
+  "esquema": "juc_3fn",
+  "origen": "public (consultado directamente)",
+  "tablas": {
+    "categorias": 6,
+    "dim_ciudades": 10,
+    "dim_sucursales": 12,
+    "clientes": 1862,
+    "productos": 606,
+    "pedidos": 3277,
+    "detalle_pedido": 3891,
+    "pagos": 3277
+  },
+  "sin_modificar_public": true,
+  "modelo_analitico_existente": "public.fact_ventas (se conserva)"
+}

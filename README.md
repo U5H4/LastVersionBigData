@@ -41,21 +41,38 @@ lo que ya se generó si prefieres revisar paso a paso.
 .\.venv\Scripts\python.exe -m pytest -q                   # solo la suite (213)
 ```
 
-## Modo nube (opcional)
+## Configuracion para mi companero (conexion Cloud)
 
-Con un `.env` rellenado, el pipeline **usa los motores reales**; sin él (o si fallan),
-**degrada a SQLite/NDJSON local** sin dejar de producir resultados. Nunca sube datos a
-cuentas ajenas: usa solo las credenciales del operador.
+El repositorio no trae credenciales. Para conectar Supabase y Atlas:
 
 ```powershell
-copy .env.example .env   # edita con tus credenciales
+copy .env.example .env   # luego edita .env localmente; nunca lo agregues a git
 ```
 
-- Supabase: usa el **Session pooler** (`aws-0-<region>.pooler.supabase.com`, `PG_SSLMODE=require`).
-  El host directo resuelve solo por IPv6.
-- MongoDB Atlas: `MONGO_URI=mongodb+srv://<usuario>:<clave>@<cluster>.mongodb.net/?appName=<app>`, `MONGO_DB=juc`.
-- Forzar modo local: `SIN_POSTGRES=1`, `SIN_MONGO=1` (o `FORZAR_SQLITE=1`).
-- `.env` nunca se versiona (en `.gitignore`); `.env.example` viaja como plantilla.
+Completa solo estos valores:
+
+- `SUPABASE_HOST`, `SUPABASE_USER`, `SUPABASE_PASSWORD`
+- `MONGO_ATLAS_URI` (MongoDB Atlas) o `MONGO_URI`
+- `GOOGLE_SHEETS_SUCURSALES_URL` (opcional, o publica una hoja con acceso por enlace)
+
+Valores esperados actuales:
+
+- Supabase: Session Pooler (`aws-0-<region>.pooler.supabase.com`, `PG_SSLMODE=require`).
+- Atlas: la base se llama `Prueba1` (`MONGO_DB=Prueba1`).
+
+Validacion en modo **solo lectura**, recomendada antes de correr cualquier otra cosa:
+
+```powershell
+.\.venv\Scripts\python.exe src\validar_postgres_cloud.py --plan
+.\.venv\Scripts\python.exe src\validar_postgres_cloud.py --ejecutar
+.\.venv\Scripts\python.exe src\integracion_real.py --exigir-cloud
+```
+
+No ejecutar `run_all.py` sin `--solo etl analisis graficos` ni los scripts `--aplicar-*`
+si no quieres reconstruir/sincronizar las bases en la nube.
+
+Modo local sin credenciales: fuerza local con `SIN_POSTGRES=1`, `SIN_MONGO=1` (o `FORZAR_SQLITE=1`).
+`.env` nunca se versiona; `.env.example` es la plantilla.
 
 ## Estructura
 
